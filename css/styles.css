@@ -39,7 +39,6 @@ main {
   text-align: center;
   background: url(../img/background.svg);
   background-position: center top;
-  position: absolute;
   background-size: cover;
   padding-top: 10%;
 }
