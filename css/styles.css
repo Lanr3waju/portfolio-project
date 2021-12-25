@@ -1,5 +1,4 @@
 body {
-  background: rgb(255, 255, 255);
   font-family: ubuntu, sans-serif;
 }
 
@@ -38,16 +37,74 @@ h2 {
 
 main {
   text-align: center;
+  background: url(../img/background.svg);
+  background-position: center top;
+  position: absolute;
+  background-size: cover;
+  padding-top: 10%;
 }
 
-.icon {
-  display: inline;
-  margin-left: 15px;
-  width: auto;
+.icons {
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  fill: #505f79;
+  transition: all 500ms ease-in-out;
 }
 
-footer {
-  margin-top: 9%;
+.icons:hover {
+  transform: translate(0, 5px);
+  transition: all 500ms ease-in-out;
+}
+
+#angel:hover {
+  fill: rgb(210, 208, 208);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(35, 33, 33);
+}
+
+#git:hover {
+  background-color: purple;
+  fill: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#linked:hover {
+  background-color: #0077b5;
+  fill: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#medium:hover {
+  background-color: rgb(45, 42, 42);
+  fill: rgb(205, 232, 213);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#twitter:hover {
+  background-color: #1da1f2;
+  fill: white;
+  padding: 5px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20%;
 }
 
 #promo {
