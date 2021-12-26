@@ -1,3 +1,131 @@
 body {
-  background: rgb(255, 255, 255);
+  font-family: ubuntu, sans-serif;
+}
+
+.welcome {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  color: rgb(23, 43, 77);
+  font-size: 2.5em;
+  margin-bottom: 3%;
+}
+
+h2 {
+  color: rgb(63, 176, 107);
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3%;
+}
+
+.ham {
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  margin-bottom: 4px;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.hamburger-btn {
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+  background: url(../img/background.svg);
+  background-position: center top;
+  background-size: cover;
+  padding-top: 10%;
+}
+
+footer {
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  height: 50px;
+}
+
+.icons {
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  fill: #505f79;
+  transition: all 500ms ease-in-out;
+}
+
+.icons:hover {
+  transform: translate(0, 5px);
+  transition: all 500ms ease-in-out;
+}
+
+.angel:hover {
+  fill: rgb(210, 208, 208);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(35, 33, 33);
+}
+
+.git:hover {
+  background-color: purple;
+  fill: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.linked:hover {
+  background-color: #0077b5;
+  fill: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.medium:hover {
+  background-color: rgb(45, 42, 42);
+  fill: rgb(205, 232, 213);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+  fill: white;
+  padding: 5px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+  height: 100%;
+  margin-bottom: 10%;
+}
+
+.promo {
+  line-height: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
