@@ -1,6 +1,7 @@
 # Portfolio Project
 
-> This is a project on building my personal portfolio
+> This branch contains the configurations for the HTML and CSS setup of the project.
+> It contains the first webpage of the project which is a mobile-first approach, comprising of the nav-bar which contains a hamburger button, and a "Welcome" text which serves as the logo, it also has the body of the webpage which has Header texts and the links to other external webpages.
 
 ![screenshot](./img/preview.png)
 
@@ -10,15 +11,16 @@ This is the first project i will carry out on HTML and CSS and encompasses all o
 
 - HTML
 
-  - Unordered List (To list out certain items on the page)
-  - nav element (To create a nav-bar)
-  - a tags (To link to other external webpages)
-  - svg are also used in the HTML
+  - `ul` Unordered List (To list out certain items on the page)
+  - `nav` element (To create a nav-bar)
+  - `a` tags (To link to other external webpages)
+  - `svg` are also used in the HTML
 
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Flexbox
   - Transition property
+  - CSS background property
 
 ## Live Demo
 
