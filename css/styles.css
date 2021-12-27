@@ -1,3 +1,8 @@
+
+body {
+  margin: 0;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -64,7 +69,7 @@ h2 {
   margin-right: auto;
   line-height: 28px;
   font-weight: 400;
-  margin-bottom: 1%;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -74,6 +79,19 @@ footer {
   margin-left: auto;
   height: 30px;
   margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+  height: 100%;
+  margin-bottom: 10%;
 }
 
 .icons {
@@ -129,28 +147,122 @@ ul {
   list-style-type: none;
 }
 
-.links {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 15%;
-  height: 100%;
-  margin-bottom: 10%;
-}
-
 .arrow-down {
-  margin-top: 5%;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
 }
 
 .work-section-header {
   color: rgba(23, 43, 77, 1);
   width: 90%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.indicator {
+  width: 48px;
+  height: 4px;
+  border-radius: 24px;
+  background: rgba(54, 179, 126, 1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.image-placeholder {
+  width: 327px;
+  height: 474px;
+  border-radius: 8px;
+  background: rgba(235, 240, 238, 1);
+  border: 1px solid rgba(208, 217, 212, 1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.text-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 327px;
+  height: 222px;
+  border-radius: 8px;
+  background: white;
+  border-top: 1px solid rgba(208, 217, 212, 1);
+  border-bottom: 1px solid rgba(208, 217, 212, 1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 252px;
+}
+
+.project-title {
+  width: 295px;
+  height: 57px;
+  font-family: 'Inter', sans-serif;
+  color: rgba(58, 74, 66, 1);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.tag-buttons {
+  border-radius: 4px;
+  display: inline;
+  background: rgba(235, 240, 238, 1);
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.enable-button {
+  width: 122px;
+  border-radius: 4px;
+  padding: 8px;
+  background: rgba(54, 179, 127, 1);
+  align-items: center;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.see-projects {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-me {
+  background: url(../img/mask-group.png), url(../img/group.png);
+  background-position: right top, left bottom;
+  background-repeat: no-repeat, no-repeat;
+  padding-top: 1px;
+  padding-bottom: 0.5px;
+}
+
+.about-me-header {
+  margin-top: 70px;
+}
+
+.resume-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
