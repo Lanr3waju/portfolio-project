@@ -1,6 +1,14 @@
 
 body {
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+.margin-centre {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav-bar {
@@ -8,8 +16,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 92%;
-  margin-right: auto;
-  margin-left: auto;
   margin-top: 3%;
 }
 
@@ -27,7 +33,6 @@ body {
 }
 
 main {
-  text-align: center;
   background: url(../img/background.svg);
   background-position: center top;
   background-size: contain;
@@ -43,13 +48,10 @@ main {
 
 h2 {
   color: rgb(63, 176, 107);
-  font-family: 'Inter', sans-serif;
   font-size: 40px;
   line-height: 52px;
   font-weight: 700;
   margin-bottom: 3%;
-  font-style: normal;
-  text-align: center;
 }
 
 .primary-header {
@@ -61,7 +63,6 @@ h2 {
 }
 
 .promo {
-  font-family: 'Inter', sans-serif;
   color: rgba(23, 43, 77, 1);
   font-size: 18px;
   width: 90%;
@@ -70,13 +71,10 @@ h2 {
   line-height: 28px;
   font-weight: 400;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 footer {
   width: auto;
-  margin-right: auto;
-  margin-left: auto;
   height: 30px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -145,21 +143,19 @@ footer {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .arrow-down {
   margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .work-section-header {
   color: rgba(23, 43, 77, 1);
   width: 90%;
   margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .indicator {
@@ -167,8 +163,6 @@ ul {
   height: 4px;
   border-radius: 24px;
   background: rgba(54, 179, 126, 1);
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 20px;
 }
 
@@ -178,24 +172,27 @@ ul {
   border-radius: 8px;
   background: rgba(235, 240, 238, 1);
   border: 1px solid rgba(208, 217, 212, 1);
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 60px;
+}
+
+.back-img {
+  background-image: url(../img/preview.png);
+  background-size: 50%;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .text-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 327px;
   height: 222px;
   border-radius: 8px;
   background: white;
   border-top: 1px solid rgba(208, 217, 212, 1);
   border-bottom: 1px solid rgba(208, 217, 212, 1);
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 252px;
 }
 
@@ -210,6 +207,12 @@ ul {
   line-height: 32px;
   text-align: center;
   margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .tag-buttons {
@@ -240,6 +243,17 @@ ul {
   font-family: 'Inter', sans-serif;
   margin-top: 5px;
   text-decoration: none;
+  transition: all 500ms ease-in-out;
+}
+
+.enable-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
+  background: rgba(54, 179, 127, 1);
+  transition: all 500ms ease-in-out;
+}
+
+.enable-button:active {
+  background: rgba(0, 133, 82, 1);
 }
 
 .see-projects {
@@ -251,7 +265,7 @@ ul {
 
 .about-me {
   background: url(../img/mask-group.png), url(../img/group.png);
-  background-position: right top, left bottom;
+  background-position: right top, left 20%;
   background-repeat: no-repeat, no-repeat;
   padding-top: 1px;
   padding-bottom: 0.5px;
@@ -262,8 +276,6 @@ ul {
 }
 
 .resume-button {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -310,4 +322,5 @@ ul {
   flex-wrap: wrap;
   width: 100%;
   height: 30%;
+  margin-left: 0;
 }
