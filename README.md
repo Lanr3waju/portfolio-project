@@ -15,9 +15,13 @@ This is the first project i will carry out on HTML and CSS and encompasses all o
   - `nav` element (To create a nav-bar)
   - `a` tags (To link to other external webpages)
   - `svg` are also used in the HTML
+  - HTML forms
+  -
 
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
+  - Pseudo-elements
+  - CSS position property
   - Flexbox
   - Transition property
   - CSS background property
