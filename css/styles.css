@@ -69,7 +69,7 @@ h2 {
   margin-right: auto;
   line-height: 28px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 8%;
 }
 
 footer {
@@ -177,7 +177,15 @@ ul {
 
 .grid-1 {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto auto;
+  row-gap: 45px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-top: 10%;
+  row-gap: 20px;
 }
 
 .art-pad {
@@ -206,11 +214,11 @@ ul {
 
 .project-title {
   width: 100%;
-  height: 57px;
+  height: 40%;
   color: rgba(58, 74, 66, 1);
   font-weight: 600;
   font-style: normal;
-  font-size: 150%;
+  font-size: 140%;
   line-height: 32px;
   text-align: center;
   margin: 0;
@@ -240,12 +248,12 @@ ul li {
 
 .enable-button {
   width: 39%;
+  margin-bottom: 5%;
   border-radius: 4px;
   padding: 2%;
   background: rgba(54, 179, 127, 1);
   align-items: center;
   color: white;
-  transition: all 500ms ease-in-out;
 }
 
 .enable-button:hover {
@@ -262,11 +270,12 @@ ul li {
   text-decoration: none;
   text-align: center;
   margin-top: 5px;
+  border: 0;
 }
 
 .about-me {
   background: url(../img/mask-group.png), url(../img/group.png);
-  background-position: right top, left 20%;
+  background-position: right top, left 25%;
   background-repeat: no-repeat, no-repeat;
   padding-top: 1px;
   padding-bottom: 0.5px;
@@ -274,11 +283,6 @@ ul li {
 
 .about-me-header {
   margin-top: 70px;
-}
-
-.resume-button {
-  margin-top: 30px;
-  margin-bottom: 20px;
 }
 
 .skills {
@@ -312,6 +316,7 @@ ul li {
 
 .skillz {
   margin-top: 20px;
+  height: 100%;
 }
 
 .tag {
