@@ -15,8 +15,10 @@ This is the first project i will carry out on HTML and CSS and encompasses all o
   - `nav` element (To create a nav-bar)
   - `a` tags (To link to other external webpages)
   - `svg` are also used in the HTML
-  - HTML forms
-  -
+  - HTML `form`
+  - Form attributes; `action` & `method`
+  - `input` attributes; `placeholder`
+  - HTML5 form validation
 
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
