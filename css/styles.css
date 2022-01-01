@@ -189,7 +189,7 @@ ul {
 }
 
 .art-pad {
-  padding: 10%;
+  padding: 10px;
 }
 
 .work-img {
@@ -275,7 +275,7 @@ ul li {
 
 .about-me {
   background: url(../img/mask-group.png), url(../img/group.png);
-  background-position: right top, left 25%;
+  background-position: right top, left 22%;
   background-repeat: no-repeat, no-repeat;
   padding-top: 1px;
   padding-bottom: 0.5px;
@@ -355,7 +355,7 @@ content {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0;
-  padding: 10px;
+  padding: 15px;
   font-family: 'Inter', sans-serif;
 }
 
