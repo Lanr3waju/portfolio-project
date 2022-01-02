@@ -438,7 +438,7 @@ ul li {
   }
 
   .art-pad {
-    padding: 20% 90px 0 90px;
+    padding: 20% 90px 110px 90px;
   }
 
   .grid-1 {
@@ -455,10 +455,25 @@ ul li {
   }
 
   .about-me {
-    background: url(../img/);
-    background-position: right top, left 25%;
+    background: url(../img/illustration-about-me-2-desktop.svg), url(../img/group-svg.svg);
+    background-position: 0 28%, 100% top;
     background-repeat: no-repeat, no-repeat;
+    background-size: 15%;
     padding-top: 1px;
     padding-bottom: 0.5px;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 32px;
+    max-width: 700px;
+    margin-bottom: 35px;
+  }
+
+  .media-button {
+    width: 30%;
+    height: 48px;
+    padding: 10px;
+    margin-top: 50px;
   }
 }
