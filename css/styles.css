@@ -79,7 +79,7 @@ h2 {
   color: rgb(63, 176, 107);
 }
 
-p {
+.about-me-paragraph {
   color: rgba(23, 43, 77, 1);
   font-size: 16px;
   width: 88%;
@@ -188,13 +188,13 @@ ul {
   text-align: center;
 }
 
-.grid-1 {
+.work-section-grid {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   row-gap: 45px;
 }
 
-.grid-2 {
+.skills-grid {
   display: grid;
   grid-template-rows: auto auto auto;
   margin-top: 10%;
@@ -350,7 +350,6 @@ ul li {
   justify-content: center;
   margin-bottom: 0;
   padding: 0 5px 0 5px;
-  font-family: 'Inter', sans-serif;
   width: 90%;
 }
 
@@ -418,11 +417,7 @@ ul li {
 }
 
 @media screen and (min-width: 950px) {
-  .welcome {
-    display: none;
-  }
-
-  .hamburger-btn {
+  .display-none-desktop {
     display: none;
   }
 
@@ -448,7 +443,7 @@ ul li {
     padding: 60px 10px 350px 10px;
   }
 
-  html {
+  .body-background {
     background: url(../img/desktop-background.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -480,7 +475,7 @@ ul li {
     padding: 90px 10px 90px 0;
   }
 
-  .grid-1 {
+  .work-section-grid {
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto;
     row-gap: 45px;
@@ -489,7 +484,7 @@ ul li {
     width: 80%;
   }
 
-  .grid-2 {
+  .skills-grid {
     grid-template-columns: 30% 30% 30%;
     column-gap: 50px;
     width: 100%;
