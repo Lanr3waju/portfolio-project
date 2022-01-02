@@ -24,9 +24,11 @@ This is the first project i will carry out on HTML and CSS and encompasses all o
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Pseudo-elements
   - CSS position property
-  - Flexbox
+  - `Flexbox`
   - Transition property
   - CSS background property
+  - CSS `Grid`
+  - `media-query` to make page responsive
 
 ## Live Demo
 
