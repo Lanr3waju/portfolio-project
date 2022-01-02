@@ -36,7 +36,7 @@ main {
   background-position: center top;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-top: 10%;
+  padding: 10% 0 10% 0;
 }
 
 .welcome {
@@ -61,12 +61,12 @@ h2 {
   color: rgb(63, 176, 107);
 }
 
-.promo {
+p {
   color: rgba(23, 43, 77, 1);
-  font-size: 18px;
-  width: 90%;
+  font-size: 16px;
+  width: 88%;
   line-height: 28px;
-  margin-bottom: 8%;
+  margin-bottom: 2%;
 }
 
 footer {
@@ -81,7 +81,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  margin-top: 15%;
+  margin-top: 10%;
   height: 100%;
   margin-bottom: 10%;
 }
@@ -396,4 +396,69 @@ ul li {
   height: 4px;
   background-color: black;
   border-radius: 3px;
+}
+
+@media screen and (min-width: 950px) {
+  main {
+    background: none;
+    padding: 0;
+  }
+
+  .intro {
+    padding: 60px 10px 350px 10px;
+  }
+
+  html {
+    background: url(../img/desktop-background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 10px;
+  }
+
+  .links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+
+  .primary-header {
+    margin-bottom: 0;
+  }
+
+  .secondary-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .promo {
+    margin-bottom: 10px;
+    max-width: 800px;
+    font-size: 20px;
+  }
+
+  .art-pad {
+    padding: 20% 90px 0 90px;
+  }
+
+  .grid-1 {
+    grid-template-rows: auto auto;
+    grid-template-columns: 320px 320px 320px;
+    row-gap: 45px;
+    column-gap: 50px;
+    margin-left: 60px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 320px 320px 320px;
+    column-gap: 50px;
+  }
+
+  .about-me {
+    background: url(../img/);
+    background-position: right top, left 25%;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 1px;
+    padding-bottom: 0.5px;
+  }
 }
