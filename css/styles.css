@@ -18,7 +18,7 @@ a {
 
 h2 {
   color: rgb(63, 176, 107);
-  font-size: 40px;
+  font-size: 2.4em;
   line-height: 52px;
   font-weight: 700;
   margin-bottom: 3%;
@@ -422,7 +422,14 @@ h2 {
   border-radius: 3px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 750px) {
+  .body-background {
+    background: url(../img/desktop-background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
   .display-none-desktop {
     display: none;
   }
@@ -437,7 +444,7 @@ h2 {
   .nav-bar {
     justify-content: center;
     margin-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 2%;
   }
 
   .webpage-content {
@@ -446,20 +453,13 @@ h2 {
   }
 
   .intro {
-    padding: 60px 10px 350px 10px;
-  }
-
-  .body-background {
-    background: url(../img/desktop-background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
+    padding: 4% 10px 350px 10px;
   }
 
   .links {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 400px;
+    width: 300px;
   }
 
   .primary-header {
@@ -473,7 +473,7 @@ h2 {
 
   .promo {
     margin-bottom: 10px;
-    max-width: 61%;
+    max-width: 60%;
     font-size: 1.1em;
   }
 
@@ -482,19 +482,28 @@ h2 {
   }
 
   .work-section-grid {
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto;
-    row-gap: 45px;
-    column-gap: 50px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    row-gap: 35px;
+    column-gap: 40px;
     padding: 0;
     width: 80%;
   }
 
   .skills-grid {
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 50px;
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    width: 102%;
     margin: 60px 0 80px 10px;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .skillz {
+    margin-top: 20px;
+    height: 100%;
+    width: 300px;
   }
 
   .about-me {
@@ -519,6 +528,63 @@ h2 {
     margin-top: 50px;
   }
 
+  .get-in-touch {
+    width: 140px;
+    margin-left: 0;
+  }
+
+  .form-foot {
+    border-top: 2px solid rgba(223, 225, 230, 1);
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .desktop-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+
+  .webpage-content {
+    background: none;
+    padding: 0;
+  }
+
+  .links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+
+  .secondary-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .work-section-grid {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    row-gap: 45px;
+    column-gap: 50px;
+    padding: 0;
+    width: 80%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 50px;
+    width: 100%;
+    margin: 60px 0 80px 10px;
+  }
+
+  .about-me-paragraph {
+    font-size: 1.1em;
+    line-height: 32px;
+    max-width: 77%;
+    margin-bottom: 35px;
+  }
+
   .contact-me {
     grid-template-columns: 50% 60%;
     text-align: left;
@@ -527,12 +593,7 @@ h2 {
     margin-bottom: 300px;
   }
 
-  .get-in-touch {
-    width: 140px;
-    margin-left: 0;
-  }
-
-  .form-foot {
-    border-top: 2px solid rgba(223, 225, 230, 1);
+  .intro {
+    padding: 2% 10px 350px 10px;
   }
 }
