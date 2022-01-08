@@ -1,11 +1,10 @@
 # Portfolio Project
 
-> This branch contains the configurations for the HTML and CSS setup of the project.
-> It contains the first webpage of the project which is a mobile-first approach, comprising of the nav-bar which contains a hamburger button, and a "Welcome" text which serves as the logo, it also has the body of the webpage which has Header texts and the links to other external webpages.
+> This is the first project i will carry out on HTML and CSS and it encompasses all of the major functions and purpose of HTML and CSS. It also creates a platform to show my works, It is based on a mobile first approach, which means the page for the mobile is designed first and it is then adapted to large screens.
 
 ![screenshot](./img/preview.png)
 
-This is the first project i will carry out on HTML and CSS and encompasses all of the major functions and purpose of HTML and CSS, also creating a platform to show my works. It is based on a mobile first approach.
+This is project on building a personal portfolio from a set of figma templates.
 
 ## Built With
 

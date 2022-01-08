@@ -105,7 +105,7 @@ h2 {
 }
 
 .about-me-paragraph {
-  color: rgba(23, 43, 77, 1);
+  color: rgba(66, 82, 110, 1);
   font-size: 16px;
   width: 88%;
   line-height: 28px;
@@ -432,10 +432,10 @@ h2 {
 
 @media screen and (min-width: 750px) {
   .body-background {
-    background: url(../img/desktop-background.png);
-    background-size: 100%;
+    background: url(../img/desktop-background.png), url(../img/bot1.svg), url(../img/bot2.svg), url(../img/bot3.svg);
+    background-size: 100%, 10%, 10%, 10%;
     background-repeat: no-repeat;
-    background-position: center 1%;
+    background-position: center 1%, left 98%, 30% 98%, right 98%;
   }
 
   .display-none-desktop {
@@ -456,7 +456,7 @@ h2 {
     position: fixed;
     background-color: white;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(23, 43, 77, 1);
+    box-shadow: 0 3px 4px rgba(23, 43, 77, 1);
   }
 
   .webpage-content {
@@ -491,7 +491,7 @@ h2 {
   }
 
   .art-pad {
-    padding: 90px 100px 90px 100px;
+    padding: 200px 100px 90px 100px;
     text-align: center;
   }
 
@@ -524,7 +524,7 @@ h2 {
     background-position: -1% 28%, 100% 15%;
     background-repeat: no-repeat, no-repeat;
     background-size: 13%, 13%;
-    padding: 50px 80px 10px 80px;
+    padding: 50px 100px 10px 100px;
   }
 
   .about-me-paragraph {
@@ -550,6 +550,10 @@ h2 {
   .form-foot {
     border-top: 2px solid rgba(223, 225, 230, 1);
   }
+
+  .connect {
+    padding: 0 100px 0 100px;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -565,9 +569,9 @@ h2 {
   }
 
   .skills-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     width: 100%;
     margin: 60px 0 80px 0;
   }
@@ -585,11 +589,7 @@ h2 {
   }
 
   .skillz {
-    width: 380px;
-  }
-
-  .connect {
-    padding: 0 90px 0 80px;
+    width: 369px;
   }
 
   .connect-text {
