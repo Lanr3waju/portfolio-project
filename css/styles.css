@@ -86,7 +86,7 @@ h2 {
   background-position: center top, right 92%;
   background-size: contain, 15%;
   background-repeat: no-repeat;
-  padding: 8% 30px 0 30px;
+  padding: 8% 0 0 0;
 }
 
 .welcome {
