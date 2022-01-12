@@ -7,5 +7,12 @@
   },
   "extends": ["development"],
   "formatters": ["stylish"],
-  "hints": ["button-type", "disown-opener", "html-checker", "meta-charset-utf-8", "meta-viewport"]
+  "hints": {
+    "button-type": "error",
+    "disown-opener": "error",
+    "html-checker": "error",
+    "meta-charset-utf-8": "error",
+    "meta-viewport": "error",
+    "no-inline-styles": "error"
+  }
 }
