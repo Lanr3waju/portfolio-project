@@ -16,5 +16,10 @@
     "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
     "lint": "npx stylelint \"**/*.css\" --fix",
     "lint:check": "npx stylelint \"**/*.css\""
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }
