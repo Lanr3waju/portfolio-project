@@ -2,15 +2,14 @@ const display = () => {
   const hamburger = document.querySelector('.hamburger-btn');
   const nav = document.querySelector('.mobile-menu');
 
-  hamburger.addEventListener(
-    'click',
-    () => (nav.classList.toggle('open'), hamburger.classList.toggle('active')),
-  );
+  const handleHamburgerToggle = () => {
+    nav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  };
 
-  nav.addEventListener(
-    'click',
-    () => (nav.classList.toggle('open'), hamburger.classList.toggle('active')),
-  );
+  hamburger.addEventListener('click', handleHamburgerToggle);
+
+  nav.addEventListener('click', handleHamburgerToggle);
 };
 
 display();
