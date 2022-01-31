@@ -14,6 +14,28 @@ const multiPostStories = [
 
 const workSection = document.querySelector('.work-section-grid');
 
+function callWorks(works) {
+  let innerHtml = '';
+
+  for (let i = 0; i < works.length; i += 1) {
+    const work = works[i];
+
+    innerHtml += `<li  class="card-li">
+        <div>
+          <p class="name">name- ${vehicle.name}</p>
+          <img src="${vehicle.images}" alt="${vehicle.name}" />
+          <p class="transmission">Transmission (Auto) - ${vehicle.isAuto}</p>
+          <p class="no-of-tyre">No. of Tyres - ${vehicle.noOfTyres}</p>
+          <button value="show-modal" id="${vehicle.id}" class= "see-more">See More</button>
+        </div>
+      </li>`;
+  }
+  return innerHtml;
+}
+
+let carsHtml = callVehicles(cars);
+
+carList.innerHTML = carsHtml;
 
 
 const display = () => {
