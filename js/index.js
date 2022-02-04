@@ -5,6 +5,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1001,
   },
 
   {
@@ -13,6 +16,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1002,
   },
 
   {
@@ -21,6 +27,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1003,
   },
 
   {
@@ -29,6 +38,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1004,
   },
 
   {
@@ -37,6 +49,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1005,
   },
 
   {
@@ -45,6 +60,9 @@ const workList = [
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     button: 'See Project',
+    workDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    id: 1006,
   },
 ];
 
@@ -155,3 +173,49 @@ const display = () => {
 };
 
 display();
+
+// const displayModal = () => {
+//   let wrapper = document.querySelector('.body-background');
+//   let buttonEl = document.querySelector('.see-more');
+//   let displayActive = document.querySelector('.modal-container');
+//   let close = document.querySelector('.exit-modal');
+//   let nav = document.querySelector('.flexible');
+
+//   const handleModalToggle = event => {
+//     if (event.target === close) {
+//       return displayActive.classList.toggle('display-block');
+//     }
+
+//     if (event.target === buttonEl) {
+//      return nav.classList.add('display-none')
+//     }
+
+//     if (event.target === close) {
+//      return nav.classList.remove('display-none')
+//     }
+
+//     if (event.target === buttonEl) {
+//       let currentId = parseInt(event.target.id);
+//       let currentWork = workList.find(({ id }) => id === currentId);
+
+//       let workModalTitle = document.querySelector('.modal-title');
+//       let workModalImg = document.querySelector('.modal-img');
+//       let workModalDescription = document.querySelector('.modal-text');
+//       let modalTag = document.querySelector('.modal-tag')
+//       let workModalImg = '';
+//       workModalImg += `<img src="${currentWork.jpeg}" alt="${currentWork.name}" />`;
+
+//       workModalTitle.textContent = currentWork.name;
+//       workModalImg.innerHTML = workModalImg;
+//       workModalDescription.textContent = currentWork.description;
+//       modalTag.textContent = mapSkillsTag(skill.skillTags)
+
+//       return displayActive.classList.toggle('display-block');
+//     }
+//   };
+
+//   wrapper.addEventListener('click', handleModalToggle);
+//   close.addEventListener('click', handleModalToggle);
+// };
+
+// displayModal();

@@ -61,11 +61,11 @@ h2 {
   border-radius: 10px;
 }
 
-nav.display {
+.display-none {
   display: none;
 }
 
-.modal-container.display {
+.display-block {
   display: block;
 }
 
@@ -80,7 +80,7 @@ nav.display {
   bottom: 0;
   padding: 10px;
   background-color: rgba(193, 199, 208, 0.98);
-  display: none;
+  /display: none;
 }
 
 .exit-modal {
@@ -89,10 +89,15 @@ nav.display {
   margin-bottom: 5px;
 }
 
+.small-ex {
+  color: white;
+  background-color: green;
+}
+
 .modal {
   width: 95%;
   padding: 10px;
-  background-color: white;
+  background-color: black;
   height: 150vh;
   border-radius: 10px;
 }

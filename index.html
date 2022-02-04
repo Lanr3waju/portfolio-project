@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   </head>  
 
-  <body class="body-background">
+  <body class="body-background flexible">
     <nav>
       <div class="nav-bar margin-centre">
         <a class="welcome display-none-desktop" href="#">WELCOME</a>
@@ -65,21 +65,22 @@
         </ul>
       </nav>
       <div class="modal-container">
-        <div class="modal">
+        <div id="wrapper" class="modal">
           <img class="exit-modal display-none-mobile" src="./img/Disabled.svg" alt="exit" />
+          <img class="exit-modal display-none-desktop" src="./img/Disabled.svg" alt="exit" />
           <img class="modal-img" src="./img/Snapshoot-Portfolio.svg" alt="work-preview" />
           <section class="desktop-modal-title">
             <h3 class="modal-title">Keeping track of hundreds of components</h3>
             <ul class="modal-buttons display-none-mobile">
               <li>
-                <button class="modal-button  enable-button" type="submit">
+                <button id="see-live" class="modal-button  enable-button" type="submit">
                   See Live <img class="modal-icons" src="./img/see-live.svg" alt="See Live icon" />
                 </button>
               </li>
               <li>
-                <button class="modal-button enable-button" type="submit">
+                <button id="see-source" class="modal-button enable-button" type="submit">
                   See Source
-                  <img class="modal-icons" src="./img/Vector.svg" alt="See source icon" />
+                  <img class="modal-icons" src="./img/Vectorgit-icon.svg" alt="See source icon" />
                 </button>
               </li>
             </ul>
@@ -107,7 +108,7 @@
             </li>
             <li>
               <button class="modal-button enable-button" type="submit">
-                See Source <img class="modal-icons" src="./img/Vector.svg" alt="See source icon" />
+                See Source <img class="modal-icons" src="./img/Vectorgit-icon.svg" alt="See source icon" />
               </button>
             </li>
           </ul>
