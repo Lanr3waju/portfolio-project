@@ -92,7 +92,7 @@ const skillsSection = document.querySelector('.skills-grid');
 const workSection = document.querySelector('.work-section-grid');
 
 function mapWorksTag(works) {
-  return works.map(work => `<li class="tag-buttons">${work}</li>`).join('');
+  return works.map((work) => `<li class="tag-buttons">${work}</li>`).join('');
 }
 
 function callWorks(works) {
@@ -136,7 +136,7 @@ workSection.innerHTML = workListHtml;
 
 function callSkills(skills) {
   function mapSkillsTag(skills) {
-    return skills.map(skill => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
+    return skills.map((skill) => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
   }
 
   let innerHtml = '';
@@ -182,7 +182,7 @@ const displayModal = () => {
   const removeNav = document.querySelector('.flexible');
 
   // eslint-disable-next-line consistent-return
-  const handleModaltoggle = event => {
+  const handleModaltoggle = (event) => {
     if (event.target === closeModal) {
       return modalContainer.classList.toggle('open');
     }
