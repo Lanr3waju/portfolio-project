@@ -72,14 +72,15 @@ h2 {
 .modal-container {
   width: auto;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   margin: 0;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 10px;
-  background-color: rgba(193, 199, 208, 0.98);
+  padding: 30px 10px 10px 10px;
+  background-color: rgba(193, 199, 208, 0.95);
 }
 
 .exit-modal {
@@ -96,10 +97,13 @@ h2 {
 
 .modal {
   width: 95%;
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
+  margin-top: 20px;
   background-color: white;
   height: 150vh;
   border-radius: 10px;
+  transform: translateY(-120%);
+  animation: mod 500ms ease-in-out 0s 1 normal forwards;
 }
 
 .modal-title {
@@ -594,6 +598,21 @@ h2 {
   border-radius: 3px;
 }
 
+@keyframes mod {
+  0% {
+    transform: translateY(-110%);
+  }
+
+  60%,
+  70% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(-4%);
+  }
+}
+
 @keyframes text {
   0% {
     opacity: 0;
@@ -750,11 +769,6 @@ h2 {
   .modal {
     height: auto;
     width: 100%;
-    position: static;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin-bottom: 50px;
   }
 
@@ -781,7 +795,6 @@ h2 {
 
   .modal-container {
     padding: 80px 240px 80px 240px;
-    position: absolute;
   }
 
   .desktop-modal-title {
