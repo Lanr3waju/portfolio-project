@@ -80,13 +80,13 @@ h2 {
   bottom: 0;
   padding: 10px;
   background-color: rgba(193, 199, 208, 0.98);
-  /display: none;
 }
 
 .exit-modal {
   cursor: pointer;
-  margin-left: 95%;
+  margin-left: 88%;
   margin-bottom: 5px;
+  width: 25px;
 }
 
 .small-ex {
@@ -97,7 +97,7 @@ h2 {
 .modal {
   width: 95%;
   padding: 10px;
-  background-color: black;
+  background-color: white;
   height: 150vh;
   border-radius: 10px;
 }
@@ -132,6 +132,11 @@ h2 {
 
 .modal-buttons li:last-child {
   width: 158px;
+}
+
+.modal-tag li:nth-child(4),
+.modal-tag li:nth-child(5) {
+  display: none;
 }
 
 .modal-button {
@@ -753,6 +758,11 @@ h2 {
     margin-bottom: 50px;
   }
 
+  .exit-modal {
+    margin-left: 95%;
+    width: 35px;
+  }
+
   .modal-text {
     line-height: 30px;
     width: 100%;
@@ -783,6 +793,11 @@ h2 {
 
   .modal-title {
     width: 100%;
+  }
+
+  .modal-tag li:nth-child(4),
+  .modal-tag li:nth-child(5) {
+    display: block;
   }
 
   .work-section-grid {

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const workList = [
   {
     webp: './img/work.webp',
@@ -90,11 +91,11 @@ const skillsSection = document.querySelector('.skills-grid');
 
 const workSection = document.querySelector('.work-section-grid');
 
-function callWorks(works) {
-  function mapWorksTag(works) {
-    return works.map(work => `<li class="tag-buttons">${work}</li>`).join('');
-  }
+function mapWorksTag(works) {
+  return works.map((work) => `<li class="tag-buttons">${work}</li>`).join('');
+}
 
+function callWorks(works) {
   let innerHtml = '';
 
   for (let i = 0; i < works.length; i += 1) {
@@ -118,7 +119,8 @@ function callWorks(works) {
             name="enable-button"
             class="see-projects enable-button"
             type="submit"
-            value="See Project"
+            value="see-projects"
+            id=${work.id}
           >
           ${work.button}
           </button>
@@ -134,7 +136,7 @@ workSection.innerHTML = workListHtml;
 
 function callSkills(skills) {
   function mapSkillsTag(skills) {
-    return skills.map(skill => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
+    return skills.map((skill) => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
   }
 
   let innerHtml = '';
@@ -171,51 +173,42 @@ const display = () => {
 
   nav.addEventListener('click', handleHamburgerToggle);
 };
-
 display();
 
-// const displayModal = () => {
-//   let wrapper = document.querySelector('.body-background');
-//   let buttonEl = document.querySelector('.see-more');
-//   let displayActive = document.querySelector('.modal-container');
-//   let close = document.querySelector('.exit-modal');
-//   let nav = document.querySelector('.flexible');
+const displayModal = () => {
+  const wrapper = document.querySelector('.body-background');
+  const modalContainer = document.querySelector('.modal-container');
+  const closeModal = document.querySelector('.exit-modal');
+  const removeNav = document.querySelector('.flexible');
 
-//   const handleModalToggle = event => {
-//     if (event.target === close) {
-//       return displayActive.classList.toggle('display-block');
-//     }
+  // eslint-disable-next-line consistent-return
+  const handleModaltoggle = (event) => {
+    if (event.target === closeModal) {
+      return modalContainer.classList.toggle('open');
+    }
 
-//     if (event.target === buttonEl) {
-//      return nav.classList.add('display-none')
-//     }
+    if (event.target.value === 'see-projects') {
+      const currentId = parseInt(event.target.id, 10);
+      const currentWork = workList.find(({ id }) => id === currentId);
 
-//     if (event.target === close) {
-//      return nav.classList.remove('display-none')
-//     }
+      const workImage = document.querySelector('.modal-pic');
+      const workName = document.querySelector('.modal-title');
+      const workModalTags = document.querySelector('.modal-tag');
+      const workModalDescription = document.querySelector('.modal-text');
+      let workPreview = '';
+      workPreview += `<img class='modal-img' src='${currentWork.jpeg}' alt='work-preview' />`;
 
-//     if (event.target === buttonEl) {
-//       let currentId = parseInt(event.target.id);
-//       let currentWork = workList.find(({ id }) => id === currentId);
+      workImage.innerHTML = workPreview;
+      workName.innerHTML = currentWork.title;
+      workModalDescription.innerHTML = currentWork.workDescription;
+      workModalTags.innerHTML = `${mapWorksTag(currentWork.workTags)}`;
 
-//       let workModalTitle = document.querySelector('.modal-title');
-//       let workModalImg = document.querySelector('.modal-img');
-//       let workModalDescription = document.querySelector('.modal-text');
-//       let modalTag = document.querySelector('.modal-tag')
-//       let workModalImg = '';
-//       workModalImg += `<img src="${currentWork.jpeg}" alt="${currentWork.name}" />`;
+      modalContainer.classList.toggle('open');
+      removeNav.classList.toggle('open');
+    }
+  };
 
-//       workModalTitle.textContent = currentWork.name;
-//       workModalImg.innerHTML = workModalImg;
-//       workModalDescription.textContent = currentWork.description;
-//       modalTag.textContent = mapSkillsTag(skill.skillTags)
+  wrapper.addEventListener('click', handleModaltoggle);
+};
 
-//       return displayActive.classList.toggle('display-block');
-//     }
-//   };
-
-//   wrapper.addEventListener('click', handleModalToggle);
-//   close.addEventListener('click', handleModalToggle);
-// };
-
-// displayModal();
+displayModal();
