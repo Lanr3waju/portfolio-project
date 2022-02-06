@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap");
 
 .enable-button {
   margin-bottom: 5%;
   border-radius: 4px;
   padding: 2%;
-  background: rgba(54, 179, 127, 1);
+  background: rgb(54 179 127 / 100%);
   align-items: center;
   color: white;
   cursor: pointer;
@@ -27,12 +27,12 @@ ul li {
 a {
   text-decoration: none;
   color: black;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 h1,
 h2 {
-  color: rgb(63, 176, 107);
+  color: rgb(63 176 107);
   font-size: 2.4em;
   line-height: 52px;
   font-weight: 700;
@@ -41,19 +41,19 @@ h2 {
 
 .body-background {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
   text-align: center;
 }
 
 .enable-button:hover {
-  box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
-  background: rgba(54, 179, 127, 1);
+  box-shadow: 0 8px 16px 0 rgb(54 179 127 / 24%);
+  background: rgb(54 179 127 / 100%);
   transition: all 200ms ease-in-out;
 }
 
 .enable-button:active {
-  background: rgba(0, 133, 82, 1);
+  background: rgb(0 133 82 / 100%);
 }
 
 .modal-img {
@@ -79,8 +79,8 @@ h2 {
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 30px 10px 10px 10px;
-  background-color: rgba(193, 199, 208, 0.95);
+  padding: 30px 10px 10px;
+  background-color: rgb(193 199 208 / 95%);
 }
 
 .exit-modal {
@@ -97,13 +97,13 @@ h2 {
 
 .modal {
   width: 95%;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 20px;
   margin-top: 20px;
   background-color: white;
   height: 150vh;
   border-radius: 10px;
   transform: translateY(-120%);
-  animation: mod 500ms ease-in-out 0s 1 normal forwards;
+  animation: mod 700ms ease-in-out 0s 1 normal forwards;
 }
 
 .modal-title {
@@ -111,7 +111,7 @@ h2 {
   font-weight: 600;
   line-height: 44px;
   text-align: left;
-  color: rgba(23, 43, 77, 1);
+  color: rgb(23 43 77 / 100%);
 }
 
 .modal-text {
@@ -119,7 +119,7 @@ h2 {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: rgba(52, 69, 99, 1);
+  color: rgb(52 69 99 / 100%);
 }
 
 .modal-buttons {
@@ -242,7 +242,7 @@ h2 {
   display: block;
   padding: 15px;
   line-height: 44px;
-  color: rgba(58, 74, 66, 1);
+  color: rgb(58 74 66 / 100%);
   opacity: 0;
   transform: translateY(-100%);
   animation: text 500ms ease-in 300ms 1 normal forwards;
@@ -267,16 +267,16 @@ h2 {
 }
 
 .desk-nav:hover {
-  color: rgba(0, 133, 82, 1);
+  color: rgb(0 133 82 / 100%);
   transition: all 200ms ease-in-out;
 }
 
 .webpage-content {
-  background: url(../img/background.svg), url(../img/Frame.svg);
+  background: url("../img/background.svg"), url("../img/Frame.svg");
   background-position: center top, right 92%;
   background-size: contain, 15%;
   background-repeat: no-repeat;
-  padding: 8% 0 0 0;
+  padding: 8% 0 0;
   position: relative;
 }
 
@@ -287,16 +287,16 @@ h2 {
 }
 
 .primary-header {
-  color: rgba(23, 43, 77, 1);
+  color: rgb(23 43 77 / 100%);
 }
 
 .secondary-header {
-  color: rgb(63, 176, 107);
+  color: rgb(63 176 107);
   margin-top: 10px;
 }
 
 .about-me-paragraph {
-  color: rgba(66, 82, 110, 1);
+  color: rgb(66 82 110 / 100%);
   font-size: 16px;
   width: 88%;
   line-height: 28px;
@@ -334,10 +334,10 @@ h2 {
 }
 
 .angel:hover {
-  fill: rgb(210, 208, 208);
+  fill: rgb(210 208 208);
   padding: 5px;
   border-radius: 5px;
-  background-color: rgb(35, 33, 33);
+  background-color: rgb(35 33 33);
 }
 
 .git:hover {
@@ -355,8 +355,8 @@ h2 {
 }
 
 .medium:hover {
-  background-color: rgb(45, 42, 42);
-  fill: rgb(205, 232, 213);
+  background-color: rgb(45 42 42);
+  fill: rgb(205 232 213);
   padding: 5px;
   border-radius: 5px;
 }
@@ -375,7 +375,7 @@ h2 {
 }
 
 .work-section-header {
-  color: rgba(23, 43, 77, 1);
+  color: rgb(23 43 77 / 100%);
   width: 100%;
   margin-top: 0;
 }
@@ -384,7 +384,7 @@ h2 {
   width: 48px;
   height: 4px;
   border-radius: 24px;
-  background: rgba(54, 179, 126, 1);
+  background: rgb(54 179 126 / 100%);
   margin-top: 20px;
 }
 
@@ -392,8 +392,8 @@ h2 {
   width: 100%;
   height: 94%;
   border-radius: 8px;
-  background: rgba(235, 240, 238, 1);
-  border: 1px solid rgba(208, 217, 212, 1);
+  background: rgb(235 240 238 / 100%);
+  border: 1px solid rgb(208 217 212 / 100%);
   margin-top: 60px;
   text-align: center;
 }
@@ -431,14 +431,14 @@ h2 {
   height: 45.9%;
   border-radius: 8px;
   background: white;
-  border-top: 1px solid rgba(208, 217, 212, 1);
-  border-bottom: 1px solid rgba(208, 217, 212, 1);
+  border-top: 1px solid rgb(208 217 212 / 100%);
+  border-bottom: 1px solid rgb(208 217 212 / 100%);
 }
 
 .project-title {
   width: 100%;
   height: 40%;
-  color: rgba(58, 74, 66, 1);
+  color: rgb(58 74 66 / 100%);
   font-weight: 600;
   font-size: 140%;
   line-height: 32px;
@@ -449,8 +449,8 @@ h2 {
 .tag-buttons {
   border-radius: 4px;
   margin-bottom: 10px;
-  background: rgba(235, 240, 238, 1);
-  padding: 2% 3% 2% 3%;
+  background: rgb(235 240 238 / 100%);
+  padding: 2% 3%;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -466,10 +466,10 @@ h2 {
 }
 
 .about-me {
-  background: url(../img/mask-group.png), url(../img/group.png);
+  background: url("../img/mask-group.png"), url("../img/group.png");
   background-position: right top, left 23%;
   background-repeat: no-repeat, no-repeat;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px;
 }
 
 .about-me-header {
@@ -491,7 +491,7 @@ h2 {
   text-align: center;
   width: 100%;
   height: 32px;
-  color: rgba(52, 69, 99, 1);
+  color: rgb(52 69 99 / 100%);
   font-weight: 600;
   margin-top: 5px;
   font-size: 1.3em;
@@ -499,8 +499,8 @@ h2 {
 }
 
 .skill-buttons {
-  background: rgba(255, 255, 255, 1);
-  color: rgba(54, 179, 126, 1);
+  background: rgb(255 255 255 / 100%);
+  color: rgb(54 179 126 / 100%);
 }
 
 .skillz {
@@ -532,7 +532,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0;
-  padding: 0 5px 0 5px;
+  padding: 0 5px;
   width: 90%;
 }
 
@@ -540,8 +540,8 @@ h2 {
   width: 100%;
   height: 48px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(208, 217, 212, 1);
+  background: rgb(255 255 255 / 100%);
+  border: 1px solid rgb(208 217 212 / 100%);
   margin-top: 20px;
 }
 
@@ -551,9 +551,9 @@ h2 {
 
 .textarea-style {
   height: 114px;
-  border: 1px solid rgba(96, 192, 149, 1);
+  border: 1px solid rgb(96 192 149 / 100%);
   margin-bottom: 30px;
-  color: rgba(9, 30, 66, 1);
+  color: rgb(9 30 66 / 100%);
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -569,11 +569,11 @@ h2 {
   padding: 5px;
   top: 9px;
   left: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 1.1em;
   line-height: 24px;
-  color: rgba(107, 119, 140, 1);
+  color: rgb(107 119 140 / 100%);
 }
 
 .get-in-touch {
@@ -600,12 +600,11 @@ h2 {
 
 @keyframes mod {
   0% {
-    transform: translateY(-110%);
+    transform: translateY(-120%);
   }
 
-  60%,
-  70% {
-    transform: translateY(30%);
+  50% {
+    transform: translateY(20%);
   }
 
   100% {
@@ -632,7 +631,7 @@ h2 {
 
 @media screen and (min-width: 750px) {
   .body-background {
-    background: url(../img/desktop-background.png), url(../img/bot1.svg), url(../img/bot2.svg), url(../img/bot3.svg);
+    background: url("../img/desktop-background.png"), url("../img/bot1.svg"), url("../img/bot2.svg"), url("../img/bot3.svg");
     background-size: 100%, 10%, 10%, 10%;
     background-repeat: no-repeat;
     background-position: center 1%, left 98%, 30% 98%, right 98%;
@@ -661,7 +660,7 @@ h2 {
     position: fixed;
     background-color: white;
     width: 100%;
-    box-shadow: 0 3px 4px rgba(23, 43, 77, 1);
+    box-shadow: 0 3px 4px rgb(23 43 77 / 100%);
   }
 
   .webpage-content {
@@ -670,7 +669,7 @@ h2 {
   }
 
   .intro {
-    padding: 4% 10px 350px 10px;
+    padding: 4% 10px 350px;
   }
 
   .links {
@@ -696,7 +695,7 @@ h2 {
   }
 
   .art-pad {
-    padding: 200px 100px 90px 100px;
+    padding: 200px 100px 90px;
     text-align: center;
   }
 
@@ -715,7 +714,7 @@ h2 {
     justify-content: space-evenly;
     align-items: stretch;
     width: 100%;
-    margin: 60px 0 80px 0;
+    margin: 60px 0 80px;
   }
 
   .skillz {
@@ -725,11 +724,11 @@ h2 {
   }
 
   .about-me {
-    background: url(../img/illustration-about-me-2-desktop.svg), url(../img/group-svg.svg);
+    background: url("../img/illustration-about-me-2-desktop.svg"), url("../img/group-svg.svg");
     background-position: -1% 28%, 100% 15%;
     background-repeat: no-repeat, no-repeat;
     background-size: 13%, 13%;
-    padding: 50px 100px 10px 100px;
+    padding: 50px 100px 10px;
   }
 
   .about-me-paragraph {
@@ -737,7 +736,7 @@ h2 {
     line-height: 32px;
     max-width: 60%;
     margin-bottom: 35px;
-    color: rgba(66, 82, 110, 1);
+    color: rgb(66 82 110 / 100%);
   }
 
   .media-button {
@@ -753,11 +752,11 @@ h2 {
   }
 
   .form-foot {
-    border-top: 2px solid rgba(223, 225, 230, 1);
+    border-top: 2px solid rgb(223 225 230 / 100%);
   }
 
   .connect {
-    padding: 0 100px 0 100px;
+    padding: 0 100px;
   }
 }
 
@@ -794,7 +793,7 @@ h2 {
   }
 
   .modal-container {
-    padding: 80px 240px 80px 240px;
+    padding: 80px 240px;
   }
 
   .desktop-modal-title {
@@ -826,19 +825,19 @@ h2 {
     align-items: stretch;
     text-align: center;
     width: 100%;
-    margin: 60px 0 80px 0;
+    margin: 60px 0 80px;
   }
 
   .contact-me {
     grid-template-columns: 36% 66.5%;
     text-align: center;
     width: 100%;
-    padding: 50px 0 40px 0;
+    padding: 50px 0 40px;
     margin-bottom: 300px;
   }
 
   .intro {
-    padding: 2% 0 350px 0;
+    padding: 2% 0 350px;
   }
 
   .skillz {
