@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-const workList = [
+const workLists = [
   {
     webp: './img/work.webp',
     jpeg: './img/work.jpg',
@@ -67,7 +67,7 @@ const workList = [
   },
 ];
 
-const skillsList = [
+const skillsLists = [
   {
     image: './img/icon-languages.png',
     text: 'Language',
@@ -131,7 +131,7 @@ function callWorks(works) {
   return innerHtml;
 }
 
-const workListHtml = callWorks(workList);
+const workListHtml = callWorks(workLists);
 workSection.innerHTML = workListHtml;
 
 function callSkills(skills) {
@@ -157,10 +157,10 @@ function callSkills(skills) {
   return innerHtml;
 }
 
-const skillsListHtml = callSkills(skillsList);
+const skillsListHtml = callSkills(skillsLists);
 skillsSection.innerHTML = skillsListHtml;
 
-const display = () => {
+const displayMenu = () => {
   const hamburger = document.querySelector('.hamburger-btn');
   const nav = document.querySelector('.mobile-menu');
 
@@ -173,7 +173,7 @@ const display = () => {
 
   nav.addEventListener('click', handleHamburgerToggle);
 };
-display();
+displayMenu();
 
 const displayModal = () => {
   const wrapper = document.querySelector('.body-background');
@@ -189,7 +189,7 @@ const displayModal = () => {
 
     if (event.target.value === 'see-projects') {
       const currentId = parseInt(event.target.id, 10);
-      const currentWork = workList.find(({ id }) => id === currentId);
+      const currentWork = workLists.find(({ id }) => id === currentId);
 
       const workImage = document.querySelector('.modal-pic');
       const workName = document.querySelector('.modal-title');
