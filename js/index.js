@@ -1,66 +1,54 @@
 /* eslint-disable linebreak-style */
 const workLists = [
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1001,
   },
 
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1002,
   },
 
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1003,
   },
 
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1004,
   },
 
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1005,
   },
 
   {
-    webp: './img/work.webp',
-    jpeg: './img/work.jpg',
+    imageURL: ['./img/work.webp', './img/work.jpg'],
     title: 'Multi-Post Stories Gain+Glory',
     workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    button: 'See Project',
     workDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     id: 1006,
@@ -102,8 +90,8 @@ const callWorks = (works) => {
     innerHtml += ` <li>
       <article class="image-placeholder  margin-centre">
         <picture>
-          <source class="work-img" srcset="${work.webp}" type="image/webp" />
-          <img class="work-img" src="${work.jpeg}" alt="work-preview" />
+          <source class="work-img" srcset="${work.imageURL[0]}" type="image/webp" />
+          <img class="work-img" src="${work.imageURL[1]}" alt="work-preview" />
         </picture>
         <div class="text-placeholder margin-centre">
           <h3 class="project-title">
@@ -120,7 +108,7 @@ const callWorks = (works) => {
             value="see-projects"
             id=${work.id}
           >
-          ${work.button}
+          See Projects
           </button>
         </div>
       </article>
@@ -177,10 +165,9 @@ const displayModal = () => {
   const closeModal = document.querySelector('.exit-modal');
   const removeNav = document.querySelector('.flexible');
 
-  // eslint-disable-next-line consistent-return
   const handleModaltoggle = (event) => {
     if (event.target === closeModal) {
-      return modalContainer.classList.toggle('open');
+      modalContainer.classList.toggle('open');
     }
 
     if (event.target.value === 'see-projects') {
