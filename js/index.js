@@ -91,11 +91,9 @@ const skillsSection = document.querySelector('.skills-grid');
 
 const workSection = document.querySelector('.work-section-grid');
 
-function mapWorksTag(works) {
-  return works.map(work => `<li class="tag-buttons">${work}</li>`).join('');
-}
+const mapWorksTag = (works) => works.map(work => `<li class="tag-buttons">${work}</li>`).join('');
 
-function callWorks(works) {
+const callWorks = (works) => {
   let innerHtml = '';
 
   for (let i = 0; i < works.length; i += 1) {
@@ -129,15 +127,13 @@ function callWorks(works) {
     </li>`;
   }
   return innerHtml;
-}
+};
 
 const workListHtml = callWorks(workLists);
 workSection.innerHTML = workListHtml;
 
-function callSkills(skills) {
-  function mapSkillsTag(skills) {
-    return skills.map(skill => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
-  }
+const callSkills = (skills) => {
+  const mapSkillsTag = (skills) => skills.map(skill => `<li class="tag-buttons skill-buttons">${skill}</li>`).join('');
 
   let innerHtml = '';
 
@@ -155,7 +151,7 @@ function callSkills(skills) {
   </li>`;
   }
   return innerHtml;
-}
+};
 
 const skillsListHtml = callSkills(skillsLists);
 skillsSection.innerHTML = skillsListHtml;
@@ -182,7 +178,7 @@ const displayModal = () => {
   const removeNav = document.querySelector('.flexible');
 
   // eslint-disable-next-line consistent-return
-  const handleModaltoggle = event => {
+  const handleModaltoggle = (event) => {
     if (event.target === closeModal) {
       return modalContainer.classList.toggle('open');
     }
