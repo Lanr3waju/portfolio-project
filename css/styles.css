@@ -550,7 +550,7 @@ h2 {
 
 .input-style:focus {
   outline: none;
-  padding: 8px;
+  padding: 5px;
   transition: all 300ms ease-in-out;
 }
 
