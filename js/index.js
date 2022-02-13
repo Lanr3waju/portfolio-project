@@ -1,15 +1,13 @@
-/* eslint-disable linebreak-style */
 const startApp = () => {
-  const mapLists = (Lists, className) => Lists.map(ListItem => `<li class="${className}">${ListItem}</li>`).join('');
+  const mapLists = (lists, className) => lists.map(listItem => `<li class="${className}">${listItem}</li>`).join('');
 
   const workLists = [
-
     {
       imageURL: ['./img/work.webp', './img/work.jpg'],
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'React'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1001,
     },
 
@@ -18,7 +16,7 @@ const startApp = () => {
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML', 'Vue'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1002,
     },
 
@@ -27,7 +25,7 @@ const startApp = () => {
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['PHP', 'CSS', 'JavaScript', 'HTML'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1003,
     },
 
@@ -36,7 +34,7 @@ const startApp = () => {
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML', 'GraphQL', 'Postgress'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1004,
     },
 
@@ -45,7 +43,7 @@ const startApp = () => {
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1005,
     },
 
@@ -54,7 +52,7 @@ const startApp = () => {
       title: 'Multi-Post Stories Gain+Glory',
       workTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
       workDescription:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
       id: 1006,
     },
   ];
@@ -86,9 +84,7 @@ const startApp = () => {
 
     const callWorks = () => {
       let innerHtml = '';
-      const cardsObject = ({
-        imageURL, title, workTags, id,
-      }) => {
+      const cardsObject = ({ imageURL, title, workTags, id }) => {
         innerHtml += ` <li>
       <article class="image-placeholder  margin-centre">
         <picture>
@@ -125,9 +121,7 @@ const startApp = () => {
 
     const callSkills = () => {
       let innerHtml = '';
-      const cardsObject = ({
-        image, text, skillTags,
-      }) => {
+      const cardsObject = ({ image, text, skillTags }) => {
         innerHtml += `<li>
     <article class="image-placeholder margin-centre skills skillz">
       <img class="skills-icon" src="${image}" alt="sphere" />
@@ -182,18 +176,14 @@ const startApp = () => {
       if (event.target.value === 'see-projects') {
         const currentId = parseInt(event.target.id, 10);
         const currentWork = workLists.find(({ id }) => id === currentId);
-        const {
-          imageURL, title, workDescription, workTags,
-        } = currentWork;
+        const { imageURL, title, workDescription, workTags } = currentWork;
 
         const workImage = document.querySelector('.modal-pic');
         const workName = document.querySelector('.modal-title');
         const workModalTags = document.querySelector('.modal-tag');
         const workModalDescription = document.querySelector('.modal-text');
         let workPreview = '';
-        workPreview += `<img class='modal-img' src='${
-          imageURL[1]
-        }' alt='work-preview' />`;
+        workPreview += `<img class='modal-img' src='${imageURL[1]}' alt='work-preview' />`;
 
         workImage.innerHTML = workPreview;
         workName.innerHTML = title;
