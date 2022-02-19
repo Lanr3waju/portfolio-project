@@ -97,10 +97,10 @@ h2 {
 
 .modal {
   width: 95%;
-  padding: 10px 10px 20px;
+  padding: 10px;
   margin-top: 20px;
   background-color: white;
-  height: 150vh;
+  height: auto;
   border-radius: 10px;
   transform: translateY(-120%);
   animation: mod 700ms ease-in-out 0s 1 normal forwards;
@@ -469,7 +469,7 @@ h2 {
 
 .about-me {
   background: url("../img/mask-group.png"), url("../img/group.png");
-  background-position: right top, left 23%;
+  background-position: right top, left 27%;
   background-repeat: no-repeat, no-repeat;
   padding: 10px 40px;
 }
@@ -738,7 +738,7 @@ h2 {
 
   .about-me {
     background: url("../img/illustration-about-me-2-desktop.svg"), url("../img/group-svg.svg");
-    background-position: -1% 28%, 100% 15%;
+    background-position: -1% 35%, 100% 15%;
     background-repeat: no-repeat, no-repeat;
     background-size: 13%, 13%;
     padding: 50px 100px 10px;
@@ -784,9 +784,8 @@ h2 {
   }
 
   .modal {
-    height: auto;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20%;
   }
 
   .exit-modal {

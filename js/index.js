@@ -1,6 +1,5 @@
-const mapLists = (lists, className) =>
-  lists.map(listItem => `<li class="${className}">${listItem}</li>`).join('');
-
+const hamburger = document.querySelector('.hamburger-btn');
+const nav = document.querySelector('.mobile-menu');
 const skillsSection = document.querySelector('.skills-grid');
 const workSection = document.querySelector('.work-section-grid');
 
@@ -81,32 +80,33 @@ const skillsLists = [
 ];
 
 const loadPageDynamically = () => {
-  const callWorks = () => {
-    for (let x = 0; x < workLists.length; x += 1) {
-      const workList = workLists[x];
-      const workLi = document.createElement('li');
+  const displayWorks = works => {
+    works.forEach(workList => {
+      const { imageURL, id, title, workTags } = workList;
+
+      const workLI = document.createElement('li');
 
       const imagePlaceholder = document.createElement('article');
       imagePlaceholder.className = 'image-placeholder margin-centre';
 
       const picture = document.createElement('img');
-      picture.src = workList.imageURL;
+      picture.src = imageURL;
       picture.className = 'work-img';
-      picture.alt = workList.name;
+      picture.alt = title;
 
       const textPlaceholder = document.createElement('div');
       textPlaceholder.className = 'text-placeholder margin-centre';
 
       const sectionHeader = document.createElement('h3');
       sectionHeader.className = 'project-title';
-      const sectionHeaderText = document.createTextNode(workList.title);
+      const sectionHeaderText = document.createTextNode(title);
       sectionHeader.appendChild(sectionHeaderText);
 
       const tagButtons = document.createElement('ul');
       tagButtons.className = 'tag margin-centre';
 
-      for (let i = 0; i < workList.workTags.length; i += 1) {
-        const eachTag = workList.workTags[i];
+      workTags.forEach(item => {
+        const eachTag = item;
 
         const tag = document.createElement('li');
         tag.className = 'tag-buttons';
@@ -115,14 +115,14 @@ const loadPageDynamically = () => {
         tag.appendChild(tagText);
 
         tagButtons.appendChild(tag);
-      }
+      });
 
       const seeProjectsButton = document.createElement('button');
       seeProjectsButton.name = 'enable-button';
       seeProjectsButton.className = 'see-projects enable-button';
       seeProjectsButton.type = 'submit';
       seeProjectsButton.value = 'see-projects';
-      seeProjectsButton.id = 'workList.id';
+      seeProjectsButton.id = id;
       const seeProjectsButtonText = document.createTextNode('See-Projects');
       seeProjectsButton.appendChild(seeProjectsButtonText);
 
@@ -133,35 +133,37 @@ const loadPageDynamically = () => {
       imagePlaceholder.appendChild(picture);
       imagePlaceholder.appendChild(textPlaceholder);
 
-      workLi.appendChild(imagePlaceholder);
-      workSection.appendChild(workLi);
-    }
-  };
-  callWorks(workLists);
+      workLI.appendChild(imagePlaceholder);
 
-  const callSkills = () => {
-    for (let x = 0; x < skillsLists.length; x += 1) {
-      const skillList = skillsLists[x];
+      workSection.appendChild(workLI);
+    });
+  };
+
+  const displaySkills = skills => {
+    skills.forEach(item => {
+      const skillList = item;
+      const { image, text, skillTags } = skillList;
+
       const skillLi = document.createElement('li');
 
       const imagePlaceholder = document.createElement('article');
       imagePlaceholder.className = 'image-placeholder margin-centre skills skillz';
 
       const picture = document.createElement('img');
-      picture.src = skillList.image;
+      picture.src = image;
       picture.className = 'skills-icon';
-      picture.alt = skillList.name;
+      picture.alt = 'skills icon';
 
       const sectionHeader = document.createElement('h3');
       sectionHeader.className = 'skills-text';
-      const sectionHeaderText = document.createTextNode(skillList.text);
+      const sectionHeaderText = document.createTextNode(text);
       sectionHeader.appendChild(sectionHeaderText);
 
       const tagButtons = document.createElement('ul');
       tagButtons.className = 'tag skill-tag margin-centre';
 
-      for (let i = 0; i < skillList.skillTags.length; i += 1) {
-        const eachTag = skillList.skillTags[i];
+      skillTags.forEach(item => {
+        const eachTag = item;
 
         const tag = document.createElement('li');
         tag.className = 'tag-buttons skill-buttons';
@@ -170,34 +172,29 @@ const loadPageDynamically = () => {
         tag.appendChild(tagText);
 
         tagButtons.appendChild(tag);
-      }
+      });
 
       imagePlaceholder.appendChild(picture);
       imagePlaceholder.appendChild(tagButtons);
 
       skillLi.appendChild(imagePlaceholder);
       skillsSection.appendChild(skillLi);
-    }
+    });
   };
 
-  callSkills(skillsLists);
+  displayWorks(workLists);
+  displaySkills(skillsLists);
 };
 
 const toggleMobileMenu = () => {
-  const displayMenu = () => {
-    const hamburger = document.querySelector('.hamburger-btn');
-    const nav = document.querySelector('.mobile-menu');
-
-    const handleHamburgerToggle = () => {
-      nav.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    };
-
-    hamburger.addEventListener('click', handleHamburgerToggle);
-
-    nav.addEventListener('click', handleHamburgerToggle);
+  const handleHamburgerToggle = () => {
+    nav.classList.toggle('open');
+    hamburger.classList.toggle('active');
   };
-  displayMenu();
+
+  hamburger.addEventListener('click', handleHamburgerToggle);
+
+  nav.addEventListener('click', handleHamburgerToggle);
 };
 
 const displayModal = () => {
@@ -207,27 +204,53 @@ const displayModal = () => {
   const removeNav = document.querySelector('.flexible');
 
   const handleModaltoggle = event => {
-    if (event.target === closeModal) {
+    const { target } = event;
+    if (target === closeModal) {
       modalContainer.classList.toggle('open');
       removeNav.classList.toggle('open');
     }
 
-    if (event.target.value === 'see-projects') {
-      const currentId = parseInt(event.target.id, 10);
+    if (target.value === 'see-projects') {
+      const currentId = parseInt(target.id, 10);
       const currentWork = workLists.find(({ id }) => id === currentId);
-      const { imageURL, title, workDescription, workTags } = currentWork;
+      const { imageURL, title, workDescription } = currentWork;
 
       const workImage = document.querySelector('.modal-pic');
       const workName = document.querySelector('.modal-title');
       const workModalTags = document.querySelector('.modal-tag');
       const workModalDescription = document.querySelector('.modal-text');
-      let workPreview = '';
-      workPreview += `<img class='modal-img' src='${imageURL[1]}' alt='work-preview' />`;
 
-      workImage.innerHTML = workPreview;
-      workName.innerHTML = title;
-      workModalDescription.innerHTML = workDescription;
-      workModalTags.innerHTML = `${mapLists(workTags, 'tag-buttons')}`;
+      const workPreview = document.createElement('img');
+      workPreview.className = 'modal-img';
+      workPreview.src = imageURL;
+      workPreview.alt = 'work-preview';
+
+      const modalChild = workImage.firstElementChild;
+
+      if (modalChild) {
+        workImage.replaceChild(workPreview, modalChild);
+      } else {
+        workImage.appendChild(workPreview);
+      }
+
+      workName.textContent = title;
+
+      workModalDescription.textContent = workDescription;
+
+      const tagList = document.createElement('ul');
+      tagList.className = 'tag modal-tag margin-centre';
+
+      currentWork.workTags.forEach(eachTag => {
+        const tag = document.createElement('li');
+        tag.className = 'tag-buttons';
+
+        const tagText = document.createTextNode(eachTag);
+        tag.appendChild(tagText);
+
+        tagList.appendChild(tag);
+      });
+
+      workModalTags.replaceWith(tagList);
 
       modalContainer.classList.toggle('open');
       removeNav.classList.toggle('open');

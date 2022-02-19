@@ -19,7 +19,17 @@ This is project on building a personal portfolio from a set of figma templates.
   - `input` attributes; `placeholder`
   - HTML5 form validation
 
-- CSS
+- Java Script
+- Implemented DOM manipulation in various parts of the project to make page dynamic.
+- JS `Objects`, `Arrays`, & `Object Arrays` to store data of similar items.
+- Implement the use of Arrow Functions `=>` and `{destructure}` methods to match the modern concentions.
+- Made use of various `JS` objects and methods such as; `node.createElement()`, `node.AppendChild()`, `node.replaceChild()`, etc. to avoid the use of `innerHTML` for security considerations.
+- Implemented `For---Loops`, `array.map()`, `array.forEach()`, through the course of the project to loop through `objects` in the `Objects Array`; thus making it possible to manipulate the objects and produce desired result.
+- Made use of `if Statements` to match specific use cases.
+- Implement the use of `Toggle classList` and `eventListeners` to make hamburger button functional.
+- Implement the use of `array.find()` & `parseInt` to locate the specific objects to display when modal pops up.
+
+* CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Pseudo-elements
   - CSS position property
