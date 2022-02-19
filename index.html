@@ -14,7 +14,7 @@
 
   <body class="body-background">
     <nav>
-      <div class="nav-bar margin-centre">
+      <div class="nav-bar flexible margin-centre">
         <a class="welcome display-none-desktop" href="#">WELCOME</a>
         <ul class="desktop-nav">
           <li>
@@ -39,6 +39,68 @@
     </nav>
 
     <main class="webpage-content">
+      <nav class="display-none-mobile">
+        <div class="nav-bar margin-centre">
+          <a class="welcome display-none-desktop" href="#">WELCOME</a>
+          <ul class="desktop-nav">
+            <li>
+              <a class="desk-nav" href="#">Portfolio</a>
+            </li>
+            <li><a class="desk-nav" href="#about">About</a></li>
+            <li><a class="desk-nav" href="#contact">Contact</a></li>
+          </ul>
+
+          <ul class="hamburger-btn display-none-desktop">
+            <li class="ham ham-bar-1"></li>
+            <li class="ham ham-bar-2"></li>
+            <li class="ham ham-bar-3"></li>
+          </ul>
+        </div>
+
+        <ul class="open display-none-desktop mobile-menu">
+          <li><a class="mobile-menu-text" href="#">Portfolio</a></li>
+          <li><a class="mobile-menu-text" href="#about">About</a></li>
+          <li><a class="mobile-menu-text" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="modal-container open">
+        <div id="wrapper" class="modal">
+          <img class="exit-modal" src="./img/Disabled.svg" alt="exit" />
+          <div class="modal-pic"></div>
+          <section class="desktop-modal-title">
+            <h3 class="modal-title">#</h3>
+            <ul class="modal-buttons display-none-mobile">
+              <li>
+                <button id="see-live" class="modal-button  enable-button" type="submit">
+                  See Live <img class="modal-icons" src="./img/see-live.svg" alt="See Live icon" />
+                </button>
+              </li>
+              <li>
+                <button id="see-source" class="modal-button enable-button" type="submit">
+                  See Source
+                  <img class="modal-icons" src="./img/Vectorgit-icon.svg" alt="See source icon" />
+                </button>
+              </li>
+            </ul>
+          </section>
+          <ul class="tag modal-tag margin-centre "></ul>
+          <p class="modal-text"></p>
+          <ul class="modal-buttons display-none-desktop">
+            <li>
+              <button class="modal-button  enable-button" type="submit">
+                See Live <img class="modal-icons" src="./img/see-live.svg" alt="See Live icon" />
+              </button>
+            </li>
+            <li>
+              <button class="modal-button enable-button" type="submit">
+                See Source
+                <img class="modal-icons" src="./img/Vectorgit-icon.svg" alt="See source icon" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <section class="intro">
         <h1 class="primary-header">Hey there. I'm Lanrewaju</h1>
         <h2 class="secondary-header">I'm a software developer</h2>
@@ -165,186 +227,7 @@
 
         <div class="indicator margin-centre"></div>
 
-        <ul class="work-section-grid margin-centre">
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.jpg" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.webp" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.webp" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.webp" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.webp" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder  margin-centre">
-              <picture>
-                <source class="work-img" srcset="./img/work.webp" type="image/webp" />
-                <img class="work-img" src="./img/work.webp" alt="work-preview" />
-              </picture>
-              <div class="text-placeholder margin-centre">
-                <h3 class="project-title">
-                  Multi-Post Stories Gain+Glory
-                </h3>
-
-                <ul class="tag margin-centre ">
-                  <li class="tag-buttons">Ruby on rails</li>
-                  <li class="tag-buttons">css</li>
-                  <li class="tag-buttons">JavaScript</li>
-                  <li class="tag-buttons">html</li>
-                </ul>
-
-                <button
-                  name="enable-button"
-                  class="see-projects enable-button"
-                  type="submit"
-                  value="See Project"
-                >
-                  See Project
-                </button>
-              </div>
-            </article>
-          </li>
-        </ul>
+        <ul class="work-section-grid margin-centre"></ul>
       </section>
 
       <article id="about" class="about-me">
@@ -357,48 +240,7 @@
 
         <a class="see-projects media-button enable-button margin-centre" href="#">Get My Resume</a>
 
-        <ul class="skills-grid">
-          <li>
-            <article class="image-placeholder margin-centre skills skillz">
-              <img class="skills-icon" src="./img/icon-languages.png" alt="sphere" />
-              <h3 class="skills-text">Language</h3>
-              <ul class="tag margin-centre skill-tag">
-                <li class="tag-buttons skill-buttons">JavaScript</li>
-                <li class="tag-buttons skill-buttons">Ruby</li>
-                <li class="tag-buttons skill-buttons">HTML</li>
-                <li class="tag-buttons skill-buttons">CSS</li>
-              </ul>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder margin-centre skills skillz">
-              <img class="skills-icon" src="./img/icon-frameworks.png" alt="sphere" />
-              <h3 class="skills-text">Frameworks</h3>
-              <ul class="tag margin-centre skill-tag">
-                <li class="tag-buttons skill-buttons">Bootstrap</li>
-                <li class="tag-buttons skill-buttons">Ruby on rails</li>
-                <li class="tag-buttons skill-buttons">Rspec</li>
-                <li class="tag-buttons skill-buttons">Capybara</li>
-                <li class="tag-buttons skill-buttons">Selenium</li>
-              </ul>
-            </article>
-          </li>
-
-          <li>
-            <article class="image-placeholder margin-centre skills skillz">
-              <img class="skills-icon" src="./img/icon-skills.png" alt="sphere" />
-              <h3 class="skills-text">Skills</h3>
-              <ul class="tag margin-centre skill-tag">
-                <li class="tag-buttons skill-buttons">Codekit</li>
-                <li class="tag-buttons skill-buttons">GitHub</li>
-                <li class="tag-buttons skill-buttons">Codepen</li>
-                <li class="tag-buttons skill-buttons">Gitlab</li>
-                <li class="tag-buttons skill-buttons">Terminal</li>
-              </ul>
-            </article>
-          </li>
-        </ul>
+        <ul class="skills-grid"></ul>
       </article>
 
       <div id="contact" class="connect">
