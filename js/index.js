@@ -263,6 +263,43 @@ const displayModal = () => {
   wrapper.addEventListener('click', handleModaltoggle);
 };
 
+const validateEmailInput = () => {
+  const form = document.getElementsByTagName('form')[0];
+  const email = document.querySelector('#email');
+  const emailError = document.querySelector('.alert');
+
+  const checkEmailValidity = () => {
+    const showError = () => {
+      if (email.validity.patternMismatch) {
+        emailError.textContent = 'Email should be valid and must be in lower case';
+      } else if (email.validity.tooShort) {
+        emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
+      }
+    };
+
+    if (email.validity.valid) {
+      emailError.textContent = '';
+    } else {
+      showError();
+    }
+
+    const submitValidForm = event => {
+      if (!email.validity.valid) {
+        event.preventDefault();
+      }
+    };
+
+    form.addEventListener('submit', submitValidForm);
+  };
+
+  email.addEventListener('input', checkEmailValidity);
+  checkEmailValidity();
+};
+
+validateEmailInput();
+};
+
+
 const startApp = () => {
   loadPageDynamically();
   toggleMobileMenu();
