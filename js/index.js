@@ -79,110 +79,113 @@ const skillsLists = [
   },
 ];
 
+const iterateWorkList = (works) => works.forEach(workList => {
+  const { imageURL, id, title, workTags } = workList;
+
+  const workLI = document.createElement('li');
+
+  const imagePlaceholder = document.createElement('article');
+  imagePlaceholder.className = 'image-placeholder margin-centre';
+
+  const picture = document.createElement('img');
+  picture.src = imageURL;
+  picture.className = 'work-img';
+  picture.alt = title;
+
+  const textPlaceholder = document.createElement('div');
+  textPlaceholder.className = 'text-placeholder margin-centre';
+
+  const sectionHeader = document.createElement('h3');
+  sectionHeader.className = 'project-title';
+  const sectionHeaderText = document.createTextNode(title);
+  sectionHeader.appendChild(sectionHeaderText);
+
+  const tagButtons = document.createElement('ul');
+  tagButtons.className = 'tag margin-centre';
+
+  workTags.forEach(item => {
+    const eachTag = item;
+
+    const tag = document.createElement('li');
+    tag.className = 'tag-buttons';
+
+    const tagText = document.createTextNode(eachTag);
+    tag.appendChild(tagText);
+
+    tagButtons.appendChild(tag);
+  });
+
+  const seeProjectsButton = document.createElement('button');
+  seeProjectsButton.name = 'enable-button';
+  seeProjectsButton.className = 'see-projects enable-button';
+  seeProjectsButton.type = 'submit';
+  seeProjectsButton.value = 'see-projects';
+  seeProjectsButton.id = id;
+  const seeProjectsButtonText = document.createTextNode('See-Projects');
+  seeProjectsButton.appendChild(seeProjectsButtonText);
+
+  textPlaceholder.appendChild(sectionHeader);
+  textPlaceholder.appendChild(tagButtons);
+  textPlaceholder.appendChild(seeProjectsButton);
+
+  imagePlaceholder.appendChild(picture);
+  imagePlaceholder.appendChild(textPlaceholder);
+
+  workLI.appendChild(imagePlaceholder);
+
+  workSection.appendChild(workLI);
+});
+
+const iterateSkillsList = skills => skills.forEach(skillList => {
+  const { image, text, skillTags } = skillList;
+
+  const skillLi = document.createElement('li');
+
+  const imagePlaceholder = document.createElement('article');
+  imagePlaceholder.className = 'image-placeholder margin-centre skills skillz';
+
+  const picture = document.createElement('img');
+  picture.src = image;
+  picture.className = 'skills-icon';
+  picture.alt = 'skills icon';
+
+  const sectionHeader = document.createElement('h3');
+  sectionHeader.className = 'skills-text';
+  const sectionHeaderText = document.createTextNode(text);
+  sectionHeader.appendChild(sectionHeaderText);
+
+  const tagButtons = document.createElement('ul');
+  tagButtons.className = 'tag skill-tag margin-centre';
+
+  skillTags.forEach(item => {
+    const eachTag = item;
+
+    const tag = document.createElement('li');
+    tag.className = 'tag-buttons skill-buttons';
+
+    const tagText = document.createTextNode(eachTag);
+    tag.appendChild(tagText);
+
+    tagButtons.appendChild(tag);
+  });
+
+  imagePlaceholder.appendChild(picture);
+  imagePlaceholder.appendChild(tagButtons);
+
+  skillLi.appendChild(imagePlaceholder);
+  skillsSection.appendChild(skillLi);
+});
+
 const loadPageDynamically = () => {
-  const displayWorks = works => {
-    works.forEach(workList => {
-      const { imageURL, id, title, workTags } = workList;
-
-      const workLI = document.createElement('li');
-
-      const imagePlaceholder = document.createElement('article');
-      imagePlaceholder.className = 'image-placeholder margin-centre';
-
-      const picture = document.createElement('img');
-      picture.src = imageURL;
-      picture.className = 'work-img';
-      picture.alt = title;
-
-      const textPlaceholder = document.createElement('div');
-      textPlaceholder.className = 'text-placeholder margin-centre';
-
-      const sectionHeader = document.createElement('h3');
-      sectionHeader.className = 'project-title';
-      const sectionHeaderText = document.createTextNode(title);
-      sectionHeader.appendChild(sectionHeaderText);
-
-      const tagButtons = document.createElement('ul');
-      tagButtons.className = 'tag margin-centre';
-
-      workTags.forEach(item => {
-        const eachTag = item;
-
-        const tag = document.createElement('li');
-        tag.className = 'tag-buttons';
-
-        const tagText = document.createTextNode(eachTag);
-        tag.appendChild(tagText);
-
-        tagButtons.appendChild(tag);
-      });
-
-      const seeProjectsButton = document.createElement('button');
-      seeProjectsButton.name = 'enable-button';
-      seeProjectsButton.className = 'see-projects enable-button';
-      seeProjectsButton.type = 'submit';
-      seeProjectsButton.value = 'see-projects';
-      seeProjectsButton.id = id;
-      const seeProjectsButtonText = document.createTextNode('See-Projects');
-      seeProjectsButton.appendChild(seeProjectsButtonText);
-
-      textPlaceholder.appendChild(sectionHeader);
-      textPlaceholder.appendChild(tagButtons);
-      textPlaceholder.appendChild(seeProjectsButton);
-
-      imagePlaceholder.appendChild(picture);
-      imagePlaceholder.appendChild(textPlaceholder);
-
-      workLI.appendChild(imagePlaceholder);
-
-      workSection.appendChild(workLI);
-    });
+  const displayWorks = () => {
+    iterateWorkList(workLists);
   };
 
-  const displaySkills = skills => {
-    skills.forEach(item => {
-      const skillList = item;
-      const { image, text, skillTags } = skillList;
-
-      const skillLi = document.createElement('li');
-
-      const imagePlaceholder = document.createElement('article');
-      imagePlaceholder.className = 'image-placeholder margin-centre skills skillz';
-
-      const picture = document.createElement('img');
-      picture.src = image;
-      picture.className = 'skills-icon';
-      picture.alt = 'skills icon';
-
-      const sectionHeader = document.createElement('h3');
-      sectionHeader.className = 'skills-text';
-      const sectionHeaderText = document.createTextNode(text);
-      sectionHeader.appendChild(sectionHeaderText);
-
-      const tagButtons = document.createElement('ul');
-      tagButtons.className = 'tag skill-tag margin-centre';
-
-      skillTags.forEach(item => {
-        const eachTag = item;
-
-        const tag = document.createElement('li');
-        tag.className = 'tag-buttons skill-buttons';
-
-        const tagText = document.createTextNode(eachTag);
-        tag.appendChild(tagText);
-
-        tagButtons.appendChild(tag);
-      });
-
-      imagePlaceholder.appendChild(picture);
-      imagePlaceholder.appendChild(tagButtons);
-
-      skillLi.appendChild(imagePlaceholder);
-      skillsSection.appendChild(skillLi);
-    });
+  const displaySkills = () => {
+    iterateSkillsList(skillsLists);
   };
 
-  displayWorks(workLists);
+  displayWorks();
   displaySkills(skillsLists);
 };
 
@@ -213,7 +216,7 @@ const displayModal = () => {
     if (target.value === 'see-projects') {
       const currentId = parseInt(target.id, 10);
       const currentWork = workLists.find(({ id }) => id === currentId);
-      const { imageURL, title, workDescription } = currentWork;
+      const { imageURL, title, workDescription, workTags } = currentWork;
 
       const workImage = document.querySelector('.modal-pic');
       const workName = document.querySelector('.modal-title');
@@ -240,7 +243,7 @@ const displayModal = () => {
       const tagList = document.createElement('ul');
       tagList.className = 'tag modal-tag margin-centre';
 
-      currentWork.workTags.forEach(eachTag => {
+      workTags.forEach(eachTag => {
         const tag = document.createElement('li');
         tag.className = 'tag-buttons';
 
