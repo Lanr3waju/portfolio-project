@@ -2,7 +2,6 @@ const hamburger = document.querySelector('.hamburger-btn');
 const nav = document.querySelector('.mobile-menu');
 const skillsSection = document.querySelector('.skills-grid');
 const workSection = document.querySelector('.work-section-grid');
-const form = document.querySelector('.forms');
 const email = document.querySelector('#email');
 const emailError = document.querySelector('.alert');
 
@@ -270,30 +269,22 @@ const displayModal = () => {
   wrapper.addEventListener('click', handleModaltoggle);
 };
 
-const checkEmailValidity = () => {
-  const showError = () => {
-    if (email.validity.patternMismatch) {
-      emailError.textContent = 'Email should be valid and must be in lower case';
-    }
-  };
-
-  if (email.validity.valid) {
-    emailError.textContent = '';
-  } else {
-    showError();
-  }
-
-  const submitValidForm = event => {
-    if (!email.validity.valid) {
-      event.preventDefault();
-    }
-  };
-
-  form.addEventListener('submit', submitValidForm);
-};
-
 const validateEmailInput = () => {
-  email.addEventListener('input', checkEmailValidity);
+  const handleEmailValidity = () => {
+    const showError = () => {
+      if (email.validity.patternMismatch) {
+        emailError.textContent = 'Email should be valid and must be in lower case';
+      }
+    };
+
+    if (email.validity.valid) {
+      emailError.textContent = '';
+    } else {
+      showError();
+    }
+  };
+
+  email.addEventListener('input', handleEmailValidity);
 };
 
 const startApp = () => {
