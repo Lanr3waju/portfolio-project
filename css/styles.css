@@ -548,6 +548,7 @@ h2 {
 }
 
 input {
+  font-size: 15px;
   padding: 9px 22px;
   line-height: 24px;
   font-family: Inter, sans-serif;
@@ -566,6 +567,7 @@ input {
   font-size: 15px;
   line-height: 24px;
   padding: 15px 20px;
+  font-family: Inter, sans-serif;
 }
 
 .textarea-style:focus {

@@ -2,7 +2,10 @@ const hamburger = document.querySelector('.hamburger-btn');
 const nav = document.querySelector('.mobile-menu');
 const skillsSection = document.querySelector('.skills-grid');
 const workSection = document.querySelector('.work-section-grid');
+const userName = document.querySelector('#name');
 const email = document.querySelector('#email');
+const comments = document.querySelector('#comment');
+const submitButton = document.querySelector('.get-in-touch');
 const emailError = document.querySelector('.alert');
 
 const workLists = [
@@ -287,11 +290,28 @@ const validateEmailInput = () => {
   email.addEventListener('input', handleEmailValidity);
 };
 
+const controlLocalStorageData = () => {
+  const handleLocalStorage = () => {
+    if (userName.value && email.value && comments.value) {
+      localStorage.setItem('name', userName.value);
+      localStorage.setItem('email', email.value);
+      localStorage.setItem('message', comments.value);
+    }
+  };
+
+  userName.value += localStorage.getItem('name');
+  email.value = localStorage.getItem('email');
+  comments.value = localStorage.getItem('message');
+
+  submitButton.addEventListener('click', handleLocalStorage);
+};
+
 const startApp = () => {
   loadPageDynamically();
   toggleMobileMenu();
   displayModal();
   validateEmailInput();
+  controlLocalStorageData();
 };
 
 startApp();
