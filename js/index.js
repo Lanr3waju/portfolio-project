@@ -5,8 +5,8 @@ const workSection = document.querySelector('.work-section-grid');
 const userName = document.querySelector('#name');
 const email = document.querySelector('#email');
 const comments = document.querySelector('#comment');
-const submitButton = document.querySelector('.get-in-touch');
 const emailError = document.querySelector('.alert');
+const form = document.querySelector('.forms');
 
 const workLists = [
   {
@@ -292,18 +292,31 @@ const validateEmailInput = () => {
 
 const controlLocalStorageData = () => {
   const handleLocalStorage = () => {
-    if (userName.value && email.value && comments.value) {
-      localStorage.setItem('name', userName.value);
-      localStorage.setItem('email', email.value);
-      localStorage.setItem('message', comments.value);
-    }
+    const lanrePortfolioPageForm = {
+      name: userName.value,
+      userEmail: email.value,
+      message: comments.value,
+    };
+
+    localStorage.setItem('lanrePortfolioPageForm', JSON.stringify(lanrePortfolioPageForm));
   };
 
-  userName.value += localStorage.getItem('name');
-  email.value = localStorage.getItem('email');
-  comments.value = localStorage.getItem('message');
+  const removeData = () => {
+    localStorage.removeItem('lanrePortfolioPageForm');
+  };
 
-  submitButton.addEventListener('click', handleLocalStorage);
+  userName.addEventListener('input', handleLocalStorage);
+  email.addEventListener('input', handleLocalStorage);
+  comments.addEventListener('input', handleLocalStorage);
+  form.addEventListener('submit', removeData);
+
+  const getLanrePortfolioPageForm = localStorage.getItem('lanrePortfolioPageForm');
+  const userInput = JSON.parse(getLanrePortfolioPageForm);
+  const { name, userEmail, message } = userInput;
+
+  userName.value = name;
+  email.value = userEmail;
+  comments.value = message;
 };
 
 const startApp = () => {
