@@ -545,35 +545,36 @@ h2 {
   background: rgb(255 255 255 / 100%);
   border: 1px solid rgb(208 217 212 / 100%);
   margin-top: 20px;
-  transition: all 300ms ease-in-out;
+}
+
+input {
+  font-size: 15px;
+  padding: 9px 22px;
+  line-height: 24px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
 }
 
 .input-style:focus {
-  outline: none;
-  padding: 5px;
-  transition: all 300ms ease-in-out;
+  outline: 2px solid rgb(96 192 149 / 100%);
 }
 
 .textarea-style {
   height: 114px;
-  border: 1px solid rgb(96 192 149 / 100%);
   margin-bottom: 30px;
   color: rgb(9 30 66 / 100%);
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  padding: 15px 20px;
+  font-family: Inter, sans-serif;
 }
 
 .textarea-style:focus {
-  outline: none;
+  outline: 2px solid rgb(96 192 149 / 100%);
 }
 
 ::placeholder {
-  width: 80%;
-  height: 18px;
-  padding: 5px;
-  top: 9px;
-  left: 10px;
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 1.1em;
