@@ -2,8 +2,11 @@ const hamburger = document.querySelector('.hamburger-btn');
 const nav = document.querySelector('.mobile-menu');
 const skillsSection = document.querySelector('.skills-grid');
 const workSection = document.querySelector('.work-section-grid');
+const userName = document.querySelector('#name');
 const email = document.querySelector('#email');
+const comments = document.querySelector('#comment');
 const emailError = document.querySelector('.alert');
+const form = document.querySelector('.forms');
 
 const workLists = [
   {
@@ -287,11 +290,41 @@ const validateEmailInput = () => {
   email.addEventListener('input', handleEmailValidity);
 };
 
+const controlLocalStorageData = () => {
+  const handleLocalStorage = () => {
+    const lanrePortfolioPageForm = {
+      name: userName.value,
+      userEmail: email.value,
+      message: comments.value,
+    };
+
+    localStorage.setItem('lanrePortfolioPageForm', JSON.stringify(lanrePortfolioPageForm));
+  };
+
+  const removeData = () => {
+    localStorage.removeItem('lanrePortfolioPageForm');
+  };
+
+  userName.addEventListener('input', handleLocalStorage);
+  email.addEventListener('input', handleLocalStorage);
+  comments.addEventListener('input', handleLocalStorage);
+  form.addEventListener('submit', removeData);
+
+  const getLanrePortfolioPageForm = localStorage.getItem('lanrePortfolioPageForm');
+  const userInput = JSON.parse(getLanrePortfolioPageForm);
+  const { name, userEmail, message } = userInput;
+
+  userName.value = name;
+  email.value = userEmail;
+  comments.value = message;
+};
+
 const startApp = () => {
   loadPageDynamically();
   toggleMobileMenu();
   displayModal();
   validateEmailInput();
+  controlLocalStorageData();
 };
 
 startApp();

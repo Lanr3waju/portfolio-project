@@ -29,6 +29,8 @@ This is project on building a personal portfolio from a set of figma templates.
 - Implement the use of `Toggle classList` and `eventListeners` to make hamburger button functional.
 - Implement the use of `array.find()` & `parseInt` to locate the specific objects to display when modal pops up.
 - Implemented `HTML` form validity in my `JS` to enable client side validations of inputs.
+- The `JSON` API `stringify` & `parse` was implemented, to enable JS Objects to be used on windows local storage.
+- The `node.localStorage` `set()` & `get()` methods were used to store and retrieve user inouts, till the form is submitted.
 
 * CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
